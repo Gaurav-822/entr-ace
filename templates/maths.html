@@ -1,0 +1,41 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    MATHS
+{% endblock %}
+
+{% block main %}
+<h1>MATHS</h1>
+<table class="table">
+    <thead>
+        <tr>
+            <th>S No.</th>
+            <th>Chapters</th>
+            <th>Status</th>
+            <th>Done</th>
+            <th>Un Done</th>
+        </tr>
+    </thead>
+
+    <tbody>
+        {% for i in range(loop) %}
+        <tr>
+            <td>{{ l[i] }}</td>
+            <td>{{ chapters[i] }} </td>
+            <td>{{ status[i] }}</td>
+            <td>
+                <form method="POST" action="/maths">
+                    <input type="submit" value="Done" name="{{ math[i] }}"/>
+                </form>
+            </td>
+            <td>
+                <form method="POST" action="/maths">
+                    <input type="submit" value="Un Done" name="{{ math[i] }}"/>
+                </form>
+            </td>
+        </tr>
+        {% endfor %}
+    </tbody>
+
+</table>
+{% endblock %}

@@ -1,0 +1,50 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Leader Board
+{% endblock %}
+
+{% block main %}
+<h1>Leader Board</h1>
+<table class="table">
+    <tr>
+        <td>
+    <table class="table">
+        <h4>PHYSICS</h4>
+    <tbody>
+        {% for i in range(loop_p) %}
+        <tr>
+            <td>{{ p_id[i] }}</td>
+        </tr>
+        {% endfor %}
+    </tbody>
+    </table>
+    </td>
+    <td>
+    <table class="table">
+        <h4>CHEMISTRY</h4>
+        <tbody>
+            {% for i in range(loop_c) %}
+            <tr>
+                <td>{{ c_id[i] }}</td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+    </td>
+    <td>
+    <table class="table">
+        <h4>MATHS</h4>
+        <tbody>
+            {% for i in range(loop_m) %}
+            <tr>
+                <td>{{ m_id[i] }}</td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+    </td>
+    </tr>
+</table>
+
+{% endblock %}

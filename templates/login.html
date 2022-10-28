@@ -1,0 +1,26 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Log In
+{% endblock %}
+
+{% block main %}
+<div class="log">
+    <h1>Hey Aspirant,</h1>
+    <h3 >Join us to make you prep Easy</h3>
+    <h4>Know All the chapters that you Know or not at a Glance</h4>
+    <br>
+    <h3>So, for What are you waiting for, go complete a chapter....</h3>
+    <hr>
+    <form action="/login" method="post">
+        <div class="mb-3">
+            <input autocomplete="off" autofocus class="form-control" id="username" name="username" placeholder="Username" type="text">
+        </div>
+        <div class="mb-3">
+            <input class="form-control" id="password" name="password" placeholder="Password" type="password">
+        </div>
+        <button class="btn btn-primary" type="submit">Log In</button>
+    </form>
+    <p style="color: #ff0000;">Register if you are new.</p>
+</div>
+{% endblock %}
